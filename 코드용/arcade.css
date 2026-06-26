@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --neon-pink: #ff2bd6;
+  --neon-cyan: #2bf7ff;
+  --neon-yellow: #fff32b;
+  --neon-purple: #a72bff;
+  --neon-green: #2bff7a;
+  --bg-deep: #0b0716;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, "Malgun Gothic", sans-serif;
+  color: #f5f5ff;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 43, 214, 0.25), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(43, 247, 255, 0.2), transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(167, 43, 255, 0.25), transparent 50%),
+    var(--bg-deep);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 16px 50px;
+}
+
+.arcade-title {
+  font-family: "Press Start 2P", -apple-system, sans-serif;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 10px 0 24px;
+  background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan), var(--neon-yellow));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine 3s linear infinite, flicker 4s infinite;
+  text-shadow: 0 0 18px rgba(255, 43, 214, 0.5);
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+@keyframes flicker {
+  0%, 96%, 100% { opacity: 1; }
+  97% { opacity: 0.85; }
+  98% { opacity: 1; }
+}
+
+.hub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--neon-cyan);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 16px;
+  padding: 6px 14px;
+  border: 1px solid rgba(43, 247, 255, 0.4);
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+
+.hub-link:hover {
+  background: rgba(43, 247, 255, 0.15);
+  box-shadow: 0 0 14px rgba(43, 247, 255, 0.5);
+}
+
+.neon-btn {
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  font-weight: bold;
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+  color: white;
+  box-shadow: 0 0 12px rgba(167, 43, 255, 0.5);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.neon-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 43, 214, 0.7);
+}
+
+select.neon-select {
+  font-size: 14px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(43, 247, 255, 0.4);
+  background: rgba(11, 7, 22, 0.8);
+  color: #f5f5ff;
+  cursor: pointer;
+}
+
+.panel-glass {
+  background: rgba(20, 14, 36, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  box-shadow: 0 0 24px rgba(167, 43, 255, 0.25);
+}
