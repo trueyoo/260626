@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>아케이드 허브</title>
+<link rel="stylesheet" href="arcade.css">
+<style>
+  .subtitle {
+    color: #c9c2e0;
+    margin-bottom: 36px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    max-width: 700px;
+    width: 100%;
+  }
+  .card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 28px 20px;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .card .icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 12px currentColor);
+  }
+  .card h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+  }
+  .card p {
+    margin: 0;
+    font-size: 13px;
+    color: #c9c2e0;
+  }
+  .card.mine { box-shadow: 0 0 18px rgba(255, 43, 214, 0.15); }
+  .card.mine:hover { transform: translateY(-6px) scale(1.03); border-color: var(--neon-pink); box-shadow: 0 0 28px rgba(255, 43, 214, 0.55); }
+  .card.brick { box-shadow: 0 0 18px rgba(43, 247, 255, 0.15); }
+  .card.brick:hover { transform: translateY(-6px) scale(1.03); border-color: var(--neon-cyan); box-shadow: 0 0 28px rgba(43, 247, 255, 0.55); }
+</style>
+</head>
+<body>
+
+<div class="arcade-title">🕹️ ARCADE HUB</div>
+<div class="subtitle">즐기고 싶은 게임을 선택하세요</div>
+
+<div class="grid">
+  <a class="card panel-glass mine" href="minesweeper.html">
+    <span class="icon">💣</span>
+    <h2>지뢰찾기</h2>
+    <p>숨겨진 지뢰를 피해 모든 칸을 열어보세요</p>
+  </a>
+  <a class="card panel-glass brick" href="breakout.html">
+    <span class="icon">🧱</span>
+    <h2>벽돌깨기</h2>
+    <p>패들로 공을 튕겨 벽돌을 모두 부숴보세요</p>
+  </a>
+</div>
+
+</body>
+</html>
